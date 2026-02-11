@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Enamel Dental Clinic",
+  title: "Imperial Dental Clinic",
   description: "Modern, patient-focused dental care",
 };
 
