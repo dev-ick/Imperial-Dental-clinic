@@ -110,8 +110,8 @@ export default function ServiceNav({ services }: ServiceNavProps) {
 
       {/* ================= Services Navigation ================= */}
       <div className=" overflow-hidden">
-        {/* Services title */}
-        <div className="flex items-center justify-between mb-4 rounded-4xl px-2 py-1.5 bg-[#161E54] text-white w-[calc(75%+32px)] mx-auto">
+          {/* Services title */}
+          <div className="flex items-center justify-between mb-4 rounded-4xl px-2 py-1.5 bg-[#161E54] text-white w-full md:w-[calc(75%+32px)] mx-auto">
           <h3 className="text-lg font-semibold">Services</h3>
           <HeartAnimated className="w-5 h-5  text-white" />
         </div>

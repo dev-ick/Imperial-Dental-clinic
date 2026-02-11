@@ -10,7 +10,7 @@ export default function DentistBio({ member }: Props) {
   return (
     <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center md:items-start gap-8 p-6 md:p-12">
       {/* Image */}
-      <div className="relative w-64 h-64 md:w-72 md:h-72 flex-shrink-0 rounded-xl overflow-hidden shadow-md">
+      <div className="relative w-full h-64 md:w-72 md:h-72 flex-shrink-0 rounded-xl overflow-hidden shadow-md">
         <Image
           src={member.image}
           alt={member.name}

@@ -33,7 +33,7 @@ export const DentalBondingHero = () => {
 
           {/* Title */}
           <motion.h2
-            className="absolute bottom-6 left-6 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg"
+            className="absolute bottom-4 right-6 sm:right-10 w-56 sm:w-64 space-y-3 z-10"
             initial={{ x: -80, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             whileHover={{ color: "#06b6d4" }} // cyan on hover

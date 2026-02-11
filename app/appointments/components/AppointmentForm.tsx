@@ -43,40 +43,43 @@ export default function AppointmentForm() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
+    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 w-full max-w-2xl mx-auto">
       <h2 className="text-xl font-semibold text-gray-900 mb-4">
         Request an Appointment
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="name"
-          type="text"
-          placeholder="Full Name"
-          required
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            name="name"
+            type="text"
+            placeholder="Full Name"
+            required
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          />
 
-        <input
-          name="phone"
-          type="tel"
-          placeholder="Phone Number"
-          required
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Phone Number"
+            required
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          />
+        </div>
 
-        <input
-          name="email"
-          type="email"
-          placeholder="Email (optional)"
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            name="email"
+            type="email"
+            placeholder="Email (optional)"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          />
 
-        <select
-          name="service"
-          required
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        >
+          <select
+            name="service"
+            required
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          >
           <option value="">Select a Service</option>
           <option value="Dental Checkups">Dental Checkups</option>
           <option value="White Fillings">White Fillings</option>

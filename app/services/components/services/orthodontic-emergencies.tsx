@@ -30,7 +30,7 @@ export const OrthodonticEmergenciesHero = () => {
               hover: { color: "#06b6d4" },
             }}
           >
-            <motion.span className="transition-colors duration-300" variants={{ hover: { color: "#06b6d4" } }}>
+            <motion.span className="hidden sm:inline transition-colors duration-300" variants={{ hover: { color: "#06b6d4" } }}>
               {subtitle.split("").map((char, i) => (
                 <motion.span key={i}>{char === " " ? "\u00A0" : char}</motion.span>
               ))}
@@ -325,7 +325,7 @@ const OrthodonticEmergencies = () => {
               <motion.button
                 whileHover={{ scale: 1.04, y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 bg-[#650000] hover:bg-[#8A1A1A] text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md transition-all"
+                className="inline-flex items-center gap-2 bg-[#650000] hover:bg-[#8A1A1A] text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md transition-all mb-6"
               >
                 Get Emergency Help Now
                 <ArrowRight className="w-4 h-4" />
@@ -429,7 +429,7 @@ const OrthodonticEmergencies = () => {
 
             <motion.div
               variants={imageCurtain}
-              className="relative min-h-[420px] bg-cover bg-center"
+              className="relative min-h-64 md:min-h-[420px] bg-cover bg-center"
               style={{ backgroundImage: "url('/images/benefit.png')" }}
             >
               <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-[#eaf4fb] to-transparent" />

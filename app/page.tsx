@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { Target,Medal, Eye,HandHeart,MessageCircle,User,BadgeCheck,PiggyBank,Umbrella,} from "lucide-react";
 import { motion,useAnimation, useTransform,AnimatePresence,useInView, useMotionValue, animate, type Variants } from "framer-motion";
 import Image from "next/image"; 
+import MobileMenu from "./components/MobileMenu";
 import { testimonials} from "./data/testimonials"
 
 const fadeUp: Variants = {
@@ -261,12 +262,14 @@ export default function HomePage() {
         <div className="relative z-10">
           <div className="grid md:grid-cols-2 gap-14 items-center">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
-            <motion.div variants={fadeUp} className="text-base text-[#650000] font-semibold mb-4">
-              or call{" "}
-              <span className="underline underline-offset-2">+254 700 000 000</span>{" "}
-              and{" "}
-              <span className="underline underline-offset-2">+254 701 111 111</span>
-            </motion.div>
+            <div className="mb-4 flex items-center justify-between">
+              <motion.div variants={fadeUp} className="text-base text-[#650000] font-semibold">
+                or call {" "}
+                <span className="underline underline-offset-2">+254 700 000 000</span>{" "}
+                and {" "}
+                <span className="underline underline-offset-2">+254 701 111 111</span>
+              </motion.div>
+            </div>
 
             <motion.h1 variants={stagger} className="text-4xl md:text-5xl text-[#161E54] font-bold leading-tight">
               {"We Are Ready To Make Your Smile Sparkle,".split(" ").map((w, i) => (
@@ -652,13 +655,13 @@ export default function HomePage() {
         
         {/* WHY CHOOSE US SECTION */}
         <motion.section
-          className="max-w-7xl mx-auto px-6 py-14 md:py-22 bg-[#D9EDF7] relative overflow-hidden rounded-t-3xl"
+          className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-22 bg-[#D9EDF7] relative overflow-visible md:overflow-hidden rounded-t-3xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3, margin: "-120px" }}
+          viewport={{ once: true, amount: 0.15 }}
         >
         {/* TOP GRID */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* LEFT CONTENT */}
           <div className="space-y-8 md:space-y-10">
             {/* Title 1 */}
@@ -687,7 +690,7 @@ export default function HomePage() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
-                className="inline-block text-2xl md:text-3xl lg:text-4xl font-bold text-[#0F2A44] leading-tight"
+                className="block text-2xl md:text-3xl lg:text-4xl font-bold text-[#0F2A44] leading-tight"
               >
                 Why Choose Imperial Dental <br />Clinic?
               </motion.h2>
@@ -709,7 +712,7 @@ export default function HomePage() {
           {/* IMAGE */}
           <motion.div
             variants={imageZoom}
-            className="relative overflow-hidden shadow-2xl aspect-[3/4] md:aspect-[16/10]"
+            className="relative overflow-hidden shadow-2xl w-full min-h-[220px] sm:min-h-[260px] md:min-h-[420px] aspect-[4/3] md:aspect-[16/10]"
           >
             <Image
               src="/images/dental1.jpg"
@@ -722,7 +725,7 @@ export default function HomePage() {
         </div>
 
         {/* FEATURE ITEMS */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-12 gap-y-10">
           {[
             {
               title: "Comfort First",
@@ -765,7 +768,7 @@ export default function HomePage() {
               key={item.title}
               custom={i}
               variants={riseUp}
-              className="flex items-start gap-4"
+              className="flex flex-col sm:flex-row items-start gap-4"
             >
               <div className="w-12 h-12 rounded-full bg-[#650000] flex items-center justify-center flex-shrink-0">
                 <item.icon className="w-6 h-6 text-white" />
@@ -786,10 +789,10 @@ export default function HomePage() {
 
         <section className="max-w-7xl mx-auto px-6 py-20 md:py-28 bg-[#D9EDF7] relative overflow-hidden rounded-3xl rounded-t-none">
               <div className="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 lg:p-12 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 md:p-12 items-center">
 
                   {/* LEFT: IMAGE */}
-                  <div className="relative w-full h-[420px] rounded-2xl overflow-hidden bg-gray-100">
+                  <div className="relative w-full h-56 md:h-[420px] rounded-2xl overflow-hidden bg-gray-100">
                     <Image
                       src="/images/us.jpg"
                       alt="Karen Dental Clinic Team"

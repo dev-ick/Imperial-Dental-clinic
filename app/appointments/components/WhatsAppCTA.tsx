@@ -13,7 +13,7 @@ export default function WhatsAppCTA() {
         href="https://wa.me/254700000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full font-semibold transition"
+        className="inline-block w-full sm:w-auto text-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full font-semibold transition"
       >
         Book via WhatsApp
       </a>

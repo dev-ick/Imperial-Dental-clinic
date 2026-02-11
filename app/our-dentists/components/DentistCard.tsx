@@ -9,7 +9,7 @@ export default function DentistCard({ member }: { member: TeamMember }) {
       href={`/our-dentists/${member.slug}`}
       className="group bg-white rounded-3xl border border-[#eef3f8] shadow-sm hover:shadow-lg transition overflow-hidden"
     >
-      <div className="relative h-64">
+      <div className="relative h-56 sm:h-64 md:h-64">
         <Image
           src={member.image}
           alt={member.name}

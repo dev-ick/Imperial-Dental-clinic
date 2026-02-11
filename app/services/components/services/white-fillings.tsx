@@ -55,7 +55,7 @@ export const WhiteFillingsHero = () => {
             }}
           >
             <motion.span
-              className="transition-colors duration-300"
+              className="hidden sm:inline transition-colors duration-300"
               variants={{
                 hover: { color: "#06b6d4" },
               }}
@@ -90,7 +90,6 @@ export const WhiteFillingsHero = () => {
           </motion.div>
         </motion.div>
       </Link>
-
       {/* Description section */}
       <div className="relative px-6 py-8 sm:px-12 sm:py-12 bg-white rounded-b-3xl shadow-[0_8px_10px_-4px_rgba(0,0,0,0.45)]">
         <div className="absolute inset-0 bg-white/90 rounded-b-3xl" />
@@ -412,7 +411,7 @@ const arrowVariants = {
     <>
       <section className="py-8 mt-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 rounded-2xl overflow-hidden shadow-lg relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-lg relative">
 
             {/* LEFT: Text Content */}
             <motion.div
@@ -437,14 +436,15 @@ const arrowVariants = {
               Using tooth-colored composite material, we restore your teeth’s strength while ensuring they blend seamlessly with your natural smile. 
               By addressing cavities promptly, white fillings prevent further damage, reduce the risk of more extensive procedures, and help you maintain a healthy, confident smile.
               </motion.p>
-              <Link href="/appointments">
+              <div className="hidden md:block mb-6">
+                <Link href="/appointments">
                 <motion.button
                   variants={riseUp}
                   whileHover="hover"
                   className="mt-6 inline-flex items-center gap-3 
-                            bg-[#650000] hover:bg-[#8A1A1A] transition 
-                            text-white
-                            px-3 py-1.5 rounded-full font-medium shadow-md"
+                              bg-[#650000] hover:bg-[#8A1A1A] transition 
+                              text-white
+                              px-3 py-1.5 rounded-full font-medium shadow-md"
                 >
                   <span className="relative z-10">
                     Book A Checkup Appointment
@@ -465,20 +465,19 @@ const arrowVariants = {
                   </motion.span>
                 </motion.button>
               </Link>
+              </div>
             </motion.div>
 
             {/* RIGHT: Image (NO animation yet) */}
             <div
-              className="relative w-full h-full"
+              className="relative w-full min-h-[220px] sm:min-h-[260px] md:min-h-[420px] bg-cover bg-center"
               style={{
                 backgroundImage: "url('/images/fillings3.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
               }}
             >
               {/* Buttons Overlay */}
               <motion.div
-                className="absolute bottom-4 right-4 w-64 space-y-3 z-10"
+                className="absolute bottom-4 right-6 sm:right-10 w-56 sm:w-64 space-y-3 z-10"
                 variants={container}
                 initial="hidden"
                 whileInView="visible"
@@ -517,6 +516,21 @@ const arrowVariants = {
                 </motion.div>
               </motion.div>
 
+            </div>
+
+            {/* Mobile-only CTA (below image) */}
+            <div className="px-6 mt-4 md:hidden mb-6">
+              <Link href="/appointments">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  className="w-full inline-flex items-center justify-center gap-3 
+                            bg-[#650000] hover:bg-[#8A1A1A] transition text-white
+                            px-4 py-3 rounded-full font-medium shadow-md"
+                >
+                  <span>Book A Checkup Appointment</span>
+                  <ArrowRight className="w-5 h-5 stroke-[2.2]" />
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>
@@ -794,7 +808,7 @@ const arrowVariants = {
                   {/* RIGHT: Image curtain reveal */}
                   <motion.div
                     variants={imageCurtain}
-                    className="relative min-h-[420px] bg-cover bg-center"
+                    className="relative min-h-64 md:min-h-[420px] bg-cover bg-center"
                     style={{ backgroundImage: "url('/images/benefit.png')" }}
                   >
                     {/* Left gradient edge */}

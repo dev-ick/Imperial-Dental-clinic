@@ -33,15 +33,15 @@ export default function ServicesLayout({
 
       {/* SIDEBAR + CONTENT */}
       <div className="max-w-7xl mx-auto px-6 py-12 md:flex md:gap-8">
-        {/* Sticky Sidebar */}
-        <aside className="md:w-1/4 md:border-r md:border-[#e6eaf0] md:pr-6 md:max-h-screen md:overflow-y-auto sticky top-0">
+        {/* Sticky Sidebar - hidden on mobile */}
+        <aside className="hidden md:block md:w-1/4 md:border-r md:border-[#e6eaf0] md:pr-6 md:max-h-screen md:overflow-y-auto sticky top-0">
           <div className="sticky top-24">
             <ServiceNav services={servicesList} />
           </div>
         </aside>
 
         {/* Scrollable Content */}
-        <main className="md:w-3/4 mt-8 md:mt-0 bg-[#f5ffff] rounded-lg">
+        <main className="w-full md:w-3/4 mt-8 md:mt-0 bg-[#f5ffff] rounded-lg">
           {children}
         </main>
       </div>

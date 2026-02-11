@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   return (
@@ -22,19 +23,20 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Contact */}
+        {/* Contact / Mobile menu */}
         <div className="flex items-center gap-2 text-sm font-medium">
-          <Image
-            src="/images/phone.png"
-            alt="Phone"
-            width={40}
-            height={40}
-          />
-          <span className="text-[#650000] text-base font-bold">
-            +254 700 000 000
-            <br />
-            +254 701 111 111
-          </span>
+          <div className="hidden md:flex items-center gap-2">
+            <Image src="/images/phone.png" alt="Phone" width={40} height={40} />
+            <span className="text-[#650000] text-base font-bold">
+              +254 700 000 000
+              <br />
+              +254 701 111 111
+            </span>
+          </div>
+
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </div>
 
