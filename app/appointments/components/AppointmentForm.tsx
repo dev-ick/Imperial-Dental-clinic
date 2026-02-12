@@ -94,7 +94,7 @@ export default function AppointmentForm() {
           <option value="Retainers">Retainers</option>
           <option value="Orthodontic Emergencies">Orthodontic Emergencies</option>
         </select>
-
+        </div>
         <input
           name="date"
           type="date"
